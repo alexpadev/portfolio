@@ -12,7 +12,7 @@ function Home() {
       <div className="w-6/7 flex flex-col items-end justify-center space-y-0 pr-8">
         <SplitText
           text="Alejandro"
-          className="text-[175px] leading-none font-bold text-neutral-200 text-right block"
+          className="text-[150px] leading-none font-bold text-neutral-200 text-right block"
           delay={75}
           duration={0.6}
           ease="power3.out"
@@ -27,7 +27,7 @@ function Home() {
 
         <SplitText
           text="Pelaez"
-          className="text-[125px] leading-none font-bold text-neutral-200 text-right block"
+          className="text-[115px] leading-none font-bold text-neutral-200 text-right block"
           delay={125}
           duration={0.6}
           ease="power3.out"
@@ -42,7 +42,7 @@ function Home() {
 
         <SplitText
           text="Full-stack developer"
-          className="text-[40px] leading-none font-bold text-[#af5048] text-right block mt-6"
+          className="text-[30px] leading-none font-bold text-[#af5048] text-right block mt-6"
           delay={20}
           duration={0.6}
           ease="power3.out"
@@ -56,7 +56,7 @@ function Home() {
         />
       </div>
 
-      <div className="w-1/2 flex items-center justify-start ml-20">
+      <div className="w-1/2 flex items-center justify-start ml-10">
         <l-trio size="150" speed="4.0" color="#af5048"></l-trio>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollFloat from "./ScrollFloat";
-import { SiReact, SiTailwindcss, SiJavascript, SiMongodb, SiGithub, SiNetlify } from "react-icons/si";
+import { SiReact, SiTailwindcss, SiJavascript, SiMongodb, SiGithub, SiNodedotjs, SiExpress, SiPostgresql, SiPhp, SiLaravel, SiBootstrap, SiFilament, SiComposer, SiPostman, SiMariadb, SiEjs } from "react-icons/si";
 import { MdInsertLink } from 'react-icons/md'
 
 const projectsData = [
@@ -20,7 +20,11 @@ const projectsData = [
       "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
     techIcons: [
       <SiJavascript key="node" color="af5048" size={24} />,
+      <SiNodedotjs key="node" color="af5048" size={24} />,
+      <SiExpress key="node" color="af5048" size={24} />,
+      <SiEjs key="node" color="af5048" size={24} />,
       <SiMongodb key="mongo" color="af5048" size={24} />,
+      <SiMariadb className="mr-1" key="mongo" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
@@ -36,7 +40,9 @@ const projectsData = [
       "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
     techIcons: [
       <SiJavascript key="node" color="af5048" size={24} />,
-      <SiMongodb key="mongo" color="af5048" size={24} />,
+      <SiNodedotjs key="node" color="af5048" size={24} />,
+      <SiExpress key="node" color="af5048" size={24} />,
+      <SiPostgresql key="mongo" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
@@ -49,9 +55,12 @@ const projectsData = [
   {
     title: "Chatter",
     description:
-      "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
+      "Basic chatting app. Backend based on NodeJS with Express and Frontend on React. Database with MongoDB and styles with TailwindCSS. User authentication with email verification, individual and group chat via websocket. AI chat with Gemini API.",
     techIcons: [
+      
       <SiJavascript key="node" color="af5048" size={24} />,
+      <SiNodedotjs key="node" color="af5048" size={24} />,
+      <SiExpress key="node" color="af5048" size={24} />,
       <SiMongodb key="mongo" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
@@ -66,10 +75,13 @@ const projectsData = [
     description:
       "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
     techIcons: [
-      <SiJavascript key="node" color="af5048" size={24} />,
-      <SiMongodb key="mongo" color="af5048" size={24} />,
+      <SiPhp key="node" color="af5048" size={24} />,
+      <SiLaravel className="ml-1" key="node" color="af5048" size={24} />,
+      <SiFilament className="ml-1" key="node" color="af5048" size={38} />,
+      <SiComposer className="ml-1" key="node" color="af5048" size={24} />,
+      <SiPostman className="ml-1" key="node" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />,
+      <SiBootstrap key="tw" color="af5048" size={24} />,
     ],
     links: {
       github: "https://github.com/usuario/mern-todo-app",
@@ -98,7 +110,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full bg-neutral-900 text-neutral-100 py-16 px-4"
+      className="w-full bg-neutral-900 mt-25 text-neutral-100 py-16 px-4"
     >
       <div className="max-w-5xl mx-auto">
         <ScrollFloat
@@ -121,7 +133,7 @@ const Projects = () => {
               scrollEnd="bottom top"
               stagger={0.03}
             >
-              <div className="border border-neutral-700 rounded-lg p-6 flex flex-col justify-between h-full hover:shadow-lg transition-shadow">
+              <div className="border border-neutral-700 rounded-lg p-6 flex flex-col justify-between h-full hover:shadow-lg transition-shadow ">
                 <div>
                   <h3 className="text-2xl font-semibold mb-3">
                     {project.title}
