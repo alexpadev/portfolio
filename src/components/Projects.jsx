@@ -1,13 +1,7 @@
 import React from "react";
 import ScrollFloat from "./ScrollFloat";
-import {
-  SiReact,
-  SiTailwindcss,
-  SiJavascript,
-  SiMongodb,
-  SiGithub,
-  SiNetlify,
-} from "react-icons/si";
+import { SiReact, SiTailwindcss, SiJavascript, SiMongodb, SiGithub, SiNetlify } from "react-icons/si";
+import { MdInsertLink } from 'react-icons/md'
 
 const projectsData = [
   {
@@ -16,7 +10,7 @@ const projectsData = [
       "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. Includes experimentation with GSAP animations, tech stack and contact information.",
     techIcons: [<SiReact key="react" color="af5048" size={24} />, <SiTailwindcss key="tw" color="af5048" size={24} />],
     links: {
-      github: "https://github.com/usuario/portfolio",
+      github: "https://github.com/alexpadev/portfolio",
       demo: "https://mi-portfolio.netlify.app",
     },
   },
@@ -117,7 +111,7 @@ const Projects = () => {
           <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
         </ScrollFloat>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-8">
           {projectsData.map((project) => (
             <ScrollFloat
               key={project.title}
@@ -150,7 +144,7 @@ const Projects = () => {
                       className="flex items-center space-x-1 hover:text-neutral-300 transition"
                     >
                       <SiGithub size={24} />
-                      <span className="font-medium">Code</span>
+                      <span className="font-medium ml-1">Code</span>
                     </a>
                   )}
                   {project.links.demo && (
@@ -160,7 +154,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-1 hover:text-neutral-300 transition"
                     >
-                      <SiNetlify size={24} />
+                      <MdInsertLink size={24} />
                       <span className="font-medium">Demo</span>
                     </a>
                   )}
