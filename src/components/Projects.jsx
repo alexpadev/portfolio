@@ -15,7 +15,7 @@ const projectsData = [
     },
   },
   {
-    title: "TactiX",
+    title: "Tactix",
     description:
       "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
     techIcons: [
@@ -37,7 +37,7 @@ const projectsData = [
     {
     title: "TrainR",
     description:
-      "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
+      "App where users can manage their own routines. Backend made with NodeJs with Express, frontend made with React. Database based on PostgreSQL. ",
     techIcons: [
       <SiJavascript key="node" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
@@ -73,7 +73,7 @@ const projectsData = [
    {
     title: "jMaps",
     description:
-      "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
+      "App where users can create places, which have questions and reviews created by the community. This places can be seen in a world map made with React-leaflet package. Made with Laravel for the backend and React for the frontend.",
     techIcons: [
       <SiPhp key="node" color="af5048" size={24} />,
       <SiLaravel className="ml-1" key="node" color="af5048" size={24} />,
@@ -110,9 +110,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full bg-neutral-900 mt-25 text-neutral-100 py-16 px-4"
+      className="w-full bg-neutral-900 mt-25 text-neutral-100 py-16 px-50"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <ScrollFloat
           animationDuration={0.6}
           ease="power3.out"
@@ -120,10 +120,10 @@ const Projects = () => {
           scrollEnd="bottom top"
           stagger={0.02}
         >
-          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
         </ScrollFloat>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-8">
           {projectsData.map((project) => (
             <ScrollFloat
               key={project.title}

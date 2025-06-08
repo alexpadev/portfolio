@@ -1,46 +1,109 @@
- import {
+import ScrollFloat from "./ScrollFloat";
+import {
   SiJavascript,
+  SiNodedotjs,
+  SiExpress,
+  SiPhp,
+  SiLaravel,
+  SiPython,
+  SiFlask,
+  SiReact,
+  SiMongodb,
+  SiMysql,
+  SiMariadb,
+  SiPostgresql,
   SiHtml5,
   SiCss3,
-  SiReact,
-  SiMysql,
-  SiMongodb,
-  SiPython,
-  SiLinkedin,
-  SiGithub,
+  SiTailwindcss,
+  SiBootstrap,
+  SiXml,
+  SiGit,
+  SiGnubash,
+  SiVirtualbox,
 } from "react-icons/si";
+import { BsCircleFill, BsCircle } from "react-icons/bs";
+import { VscVscode } from "react-icons/vsc";
+
+const techs = {
+  "Programming Languages": [
+    { Icon: SiJavascript, name: "JavaScript", level: 3 },
+    { Icon: SiPhp, name: "PHP", level: 1 },
+    { Icon: SiPython, name: "Python", level: 2 },
+    { Icon: SiHtml5, name: "HTML", level: 3 },
+    { Icon: SiCss3, name: "CSS", level: 3 },
+    { Icon: SiXml, name: "XML", level: 2 },
+    { Icon: SiGnubash, name: "Bash", level: 2 },
+  ],
+  Frameworks: [
+    { Icon: SiNodedotjs, name: "Node.js", level: 3 },
+    { Icon: SiExpress, name: "Express", level: 3 },
+    { Icon: SiLaravel, name: "Laravel", level: 1 },
+    { Icon: SiFlask, name: "Flask", level: 2 },
+    { Icon: SiReact, name: "React", level: 2 },
+    { Icon: SiBootstrap, name: "Bootstrap", level: 2 },
+    { Icon: SiTailwindcss, name: "Tailwind CSS", level: 3 },
+  ],
+  "Databases": [
+    { Icon: SiMongodb, name: "MongoDB", level: 2 },
+    { Icon: SiMysql, name: "MySQL", level: 2 },
+    { Icon: SiMariadb, name: "MariaDB", level: 2 },
+    { Icon: SiPostgresql, name: "PostgreSQL", level: 2 },
+  ],
+  Other: [
+    { Icon: VscVscode, name: "VS Code", level: 3 },
+    { Icon: SiVirtualbox, name: "VirtualBox", level: 2 },
+    { Icon: SiGit, name: "Git", level: 3 },
+  ],
+};
+
+const renderLevel = (n) => {
+  return (
+    <div className="flex space-x-1 mt-1">
+      {[1, 2, 3].map((i) =>
+        i <= n ? (
+          <BsCircleFill key={i} className="text-[#af5048]" size={10} />
+        ) : (
+          <BsCircle key={i} className="text-neutral-600" size={10} />
+        )
+      )}
+    </div>
+  );
+};
 
 const Stack = () => {
-    return(
-        <div className="w-full bg-neutral-900 min-h-screen p-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center space-x-8">
-            <div className="flex flex-col items-center">
-              <SiJavascript className="text-yellow-400" size={60} />
-            </div>
-            <div className="flex flex-col items-center">
-              <SiHtml5 className="text-orange-500" size={60} />
-            </div>
-            <div className="flex flex-col items-center">
-              <SiCss3 className="text-blue-500" size={60} />
-            </div>
-            <div className="flex flex-col items-center">
-              <SiReact className="text-cyan-400" size={60} />
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMysql className="text-cyan-400" size={80} />
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMongodb className="text-green-700" size={80} />
-            </div>
-            <div className="flex flex-col items-center">
-              <SiPython className="text-yellow-400" size={65} />
-            </div>
-          </div>
-        </div>
+  return (
+    <div className="w-full mt-35 bg-neutral-900 min-h-screen py-12 overflow-auto">
+      <div className="max-w-5xl mx-auto px-4">
+        <ScrollFloat
+          animationDuration={0.5}
+          ease="back.inOut(2)"
+          scrollStart="center bottom"
+          scrollEnd="bottom top"
+          stagger={0.05}
+        >
+          {Object.entries(techs).map(([category, items]) => (
+            <section key={category} className="mb-12">
+              <h2 className="text-3xl font-semibold mb-6 border-b-2 border-neutral-600 pb-2 text-white">
+                {category}
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+                {items.map(({ Icon, name, level }) => (
+                  <div
+                    key={name}
+                    className="flex flex-col items-center text-white"
+                  >
+                    <Icon size={60} className="mb-2" />
+                    <span className="mt-1 font-medium">{name}</span>
+                    {renderLevel(level)}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </ScrollFloat>
       </div>
-    )
-}
+    </div>
+  );
+};
 
 export default Stack;
- 

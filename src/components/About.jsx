@@ -11,7 +11,7 @@ const About = () => {
           scrollEnd="bottom top"
           stagger={0.03}
         >
-            <h2 className="text-3xl font-semibold mb-4 border-b border-neutral-600 pb-2">
+            <h2 className="text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
               About me
             </h2>
           <div className="text-2xl leading-relaxed">
@@ -26,7 +26,7 @@ const About = () => {
        
 
           <section className="mt-12">
-            <h2 className="text-3xl font-semibold mb-4 border-b border-neutral-600 pb-2">
+            <h2 className="text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
               Work Experience
             </h2>
             <ul className="list-disc list-inside space-y-3 text-xl">
@@ -41,7 +41,7 @@ const About = () => {
           </section>
 
           <section className="mt-12 mb-8">
-            <h2 className="text-3xl font-semibold mb-4 border-b border-neutral-600 pb-2">
+            <h2 className="text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
               Studies
             </h2>
             <ul className="list-disc list-inside space-y-3 text-xl">
