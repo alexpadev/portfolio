@@ -1,4 +1,3 @@
-import React from "react";
 import ScrollFloat from "./ScrollFloat";
 import { SiReact, SiTailwindcss, SiJavascript, SiMongodb, SiGithub, SiNodedotjs, SiExpress, SiPostgresql, SiPhp, SiLaravel, SiBootstrap, SiFilament, SiComposer, SiPostman, SiMariadb, SiEjs } from "react-icons/si";
 import { MdInsertLink } from 'react-icons/md'
@@ -55,7 +54,7 @@ const projectsData = [
   {
     title: "Chatter",
     description:
-      "Basic chatting app. Backend based on NodeJS with Express and Frontend on React. Database with MongoDB and styles with TailwindCSS. User authentication with email verification, individual and group chat via websocket. AI chat with Gemini API.",
+      "Real-time chatting app. Backend based on NodeJS with Express and Frontend on React. Database with MongoDB and styles with TailwindCSS. User authentication with email verification, individual and group chat via websocket. AI chat with Gemini API.",
     techIcons: [
       
       <SiJavascript key="node" color="af5048" size={24} />,
