@@ -79,52 +79,48 @@ const sections = [
 
 const renderLevel = (n) => (
   <div className="flex space-x-1 mt-1">
-    {[1, 2, 3].map((i) =>
-      i <= n ? (
-        <BsCircleFill key={i} className="text-[#af5048]" size={10} />
-      ) : (
-        <BsCircle key={i} className="text-neutral-600" size={10} />
-      )
+    {[1, 2, 3].map(i =>
+      i <= n
+        ? <BsCircleFill key={i} className="text-[#af5048]" size={10} />
+        : <BsCircle key={i} className="text-neutral-600" size={10} />
     )}
   </div>
 );
 
 const Stack = () => {
   return (
-    <div className="w-full mt-35 bg-neutral-900 min-h-screen py-12 overflow-auto">
-      <div className="max-w-5xl mx-auto px-4">
-        <ScrollFloat
-          animationDuration={0.5}
-          ease="back.inOut(2)"
-          scrollStart="center bottom"
-          scrollEnd="bottom top"
-          stagger={0.05}
-        >
-          {sections.map(({ Icon: SectionIcon, title, items }) => (
-            <section key={title} className="mb-12">
+    <div className="w-full mt-30 bg-neutral-900 min-h-screen py-12 text-neutral-100">
+      <h2 className="text-4xl font-bold text-center mb-18">Stack</h2>
 
-              <header className="flex items-center mb-4 border-b-2 border-neutral-600 pb-2 mb-10 space-x-2">
-                <SectionIcon size={28} className="text-[#af5048]" />
-                <h2 className="text-3xl font-semibold text-white">
+      <div className="max-w-5xl mx-auto px-4">
+        {sections.map(({ Icon: SectionIcon, title, items }) => (
+          <ScrollFloat
+            key={title}
+            animationDuration={0.5}
+            ease="back.inOut(2)"
+            scrollStart="top bottom"
+            scrollEnd="center top"
+            stagger={0.03}
+          >
+            <section className="mb-12">
+              <header className="flex items-center mb-4 border-b-2 border-neutral-600 pb-2 space-x-2">
+                <SectionIcon size={28} className="text-[#af5048] mb-1" />
+                <h2 className="text-3xl font-semibold text-white mb-2">
                   {title}
                 </h2>
               </header>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 mt-7">
                 {items.map(({ Icon, name, level }) => (
-                  <div
-                    key={name}
-                    className="flex flex-col items-center text-white"
-                  >
-                    <Icon size={60} className="mb-2" />
-                    <span className="mt-1 font-medium">{name}</span>
+                  <div key={name} className="flex flex-col items-center text-white">
+                    <Icon size={40} className="mb-2" />
+                    <span className="mt-1">{name}</span>
                     {renderLevel(level)}
                   </div>
                 ))}
               </div>
             </section>
-          ))}
-        </ScrollFloat>
+          </ScrollFloat>
+        ))}
       </div>
     </div>
   );

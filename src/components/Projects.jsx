@@ -6,7 +6,7 @@ const projectsData = [
   {
     title: "Portfolio",
     description:
-      "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. Includes experimentation with GSAP animations, tech stack and contact information.",
+      "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. It has experimentation with GSAP animations aswell. Includes personal information, tech stack, projects and contact information.",
     techIcons: [<SiReact key="react" color="af5048" size={24} />, <SiTailwindcss key="tw" color="af5048" size={24} />],
     links: {
       github: "https://github.com/alexpadev/portfolio",
@@ -28,7 +28,7 @@ const projectsData = [
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
     links: {
-      github: "https://github.com/usuario/mern-todo-app",
+      github: "https://github.com/alexpadev/tactix",
       demo: "https://todo-mern-app.netlify.app",
     },
   },
@@ -46,15 +46,15 @@ const projectsData = [
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
     links: {
-      github: "https://github.com/usuario/mern-todo-app",
-      demo: "https://todo-mern-app.netlify.app",
+      github: "https://github.com/alexpadev/trainR",
+      demo: "https://trainr-ru6t.onrender.com/",
     },
   },
 
   {
     title: "Chatter",
     description:
-      "Real-time chatting app. Backend based on NodeJS with Express and Frontend on React. Database with MongoDB and styles with TailwindCSS. User authentication with email verification, individual and group chat via websocket. AI chat with Gemini API.",
+      "Real-time chatting app. Backend based on NodeJS with Express and Frontend on React. Database with MongoDB and styles with TailwindCSS. User authentication with email verification, individual and group chat via websocket. AI chatbot with Gemini API.",
     techIcons: [
       
       <SiJavascript key="node" color="af5048" size={24} />,
@@ -65,7 +65,7 @@ const projectsData = [
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
     links: {
-      github: "https://github.com/usuario/mern-todo-app",
+      github: "https://github.com/alexpadev/chatter",
       demo: "https://todo-mern-app.netlify.app",
     },
   },
@@ -83,7 +83,7 @@ const projectsData = [
       <SiBootstrap key="tw" color="af5048" size={24} />,
     ],
     links: {
-      github: "https://github.com/usuario/mern-todo-app",
+      github: "https://github.com/alexpadev/jmaps",
       demo: "https://todo-mern-app.netlify.app",
     },
   },
@@ -99,7 +99,7 @@ const projectsData = [
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
     links: {
-      github: "https://github.com/usuario/mern-todo-app",
+      github: "https://github.com/alexpadev/wannapop",
       demo: "https://todo-mern-app.netlify.app",
     },
   },
@@ -111,7 +111,9 @@ const Projects = () => {
       id="projects"
       className="w-full bg-neutral-900 mt-25 text-neutral-100 py-16 px-50"
     >
-      <div className="max-w-8xl mx-auto">
+      <h2 className="text-4xl font-bold text-center mb-18">My Projects</h2>
+
+      <div className="max-w-7xl mx-auto">
         <ScrollFloat
           animationDuration={0.6}
           ease="power3.out"
@@ -119,7 +121,6 @@ const Projects = () => {
           scrollEnd="bottom top"
           stagger={0.02}
         >
-          <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
         </ScrollFloat>
 
         <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-8">
