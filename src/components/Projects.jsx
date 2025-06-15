@@ -146,6 +146,7 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
+                  <img src="src/assets/trainR.png" alt="Project image" className="w-full h-70 object-cover rounded-lg mb-4" />
                 </div>
                 <div className="mt-4 flex items-center space-x-4">
                   {project.links.github && (

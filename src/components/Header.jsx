@@ -3,8 +3,8 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 
 const Header = () => {
   return (
-    <header className="fixed top-4 right-4 flex space-x-6 z-20 py-4 px-30">
-      <Link
+    <header className="fixed top-4 right-1 flex space-x-6 z-20 py-4 px-30">
+      {/* <Link
         to="/"
         className="border-3 border-neutral-100 rounded-full px-4 py-2 text-neutral-100 font-semibold text-xl hover:text-black hover:bg-neutral-100 transition cursor-pointer"
       >
@@ -27,7 +27,7 @@ const Header = () => {
         className="border-3 border-neutral-100 rounded-full px-4 py-2 text-neutral-100 font-semibold text-xl hover:text-black hover:bg-neutral-100 transition cursor-pointer"
       >
         Projects
-      </Link>
+      </Link> */}
 
       <a
         href="https://www.linkedin.com/in/alejandro-pelaez-almoguera-500b042b1/"
