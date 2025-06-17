@@ -139,47 +139,56 @@ const Projects = () => {
               scrollEnd="bottom top"
               stagger={0.03}
             >
-              <div className="border border-neutral-700 rounded-lg p-6 flex flex-col justify-between h-full hover:shadow-lg transition-shadow ">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">
-                    {project.title}
-                  </h3>
+              <div className="border border-neutral-700 rounded-lg p-6 flex flex-col h-full hover:shadow-lg transition-shadow">
+                
+                <div className="mb-4">
+                  <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-neutral-300 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap items-center gap-2 mb-4">
+                
+                </div>
+
+                <div className="mt-auto">
+                    <div className="flex flex-wrap items-center gap-2">
                     {project.techIcons.map((IconComp, i) => (
-                      <div key={i} className="text-amber-400">
-                        {IconComp}
-                      </div>
+                      <div key={i} className="text-amber-400 mb-4">{IconComp}</div>
                     ))}
                   </div>
-                  <img src={project.image} alt="Project image" className="border border-neutral-800 w-full h-70 object-cover rounded-lg mb-4" />
+                 <div className="border border-neutral-800 rounded-lg overflow-hidden mb-8 w-full">
+                    <img
+                      src={project.image}
+                      alt={`Imagen del proyecto ${project.title}`}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    {project.links.github && (
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-1 hover:text-neutral-300 transition"
+                      >
+                        <SiGithub size={24} />
+                        <span className="font-medium">Code</span>
+                      </a>
+                    )}
+                    {project.links.demo && (
+                      <a
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-1 hover:text-neutral-300 transition"
+                      >
+                        <MdInsertLink size={24} />
+                        <span className="font-medium">Demo</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <div className="mt-4 flex items-center space-x-4">
-                  {project.links.github && (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-1 hover:text-neutral-300 transition"
-                    >
-                      <SiGithub size={24} />
-                      <span className="font-medium ml-1">Code</span>
-                    </a>
-                  )}
-                  {project.links.demo && (
-                    <a
-                      href={project.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-1 hover:text-neutral-300 transition"
-                    >
-                      <MdInsertLink size={24} />
-                      <span className="font-medium">Demo</span>
-                    </a>
-                  )}
-                </div>
+
               </div>
             </ScrollFloat>
+
           ))}
         </div>
       </div>
