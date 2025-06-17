@@ -8,6 +8,7 @@ const projectsData = [
     description:
       "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. It has experimentation with GSAP animations aswell. Includes personal information, tech stack, projects and contact information.",
     techIcons: [<SiReact key="react" color="af5048" size={24} />, <SiTailwindcss key="tw" color="af5048" size={24} />],
+    image: "src/assets/portfolio.png",
     links: {
       github: "https://github.com/alexpadev/portfolio",
       demo: "https://mi-portfolio.netlify.app",
@@ -27,6 +28,7 @@ const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
+    image: "src/assets/tactix.png",
     links: {
       github: "https://github.com/alexpadev/tactix",
       demo: "https://todo-mern-app.netlify.app",
@@ -45,6 +47,7 @@ const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
+    image: "src/assets/trainR.png",
     links: {
       github: "https://github.com/alexpadev/trainR",
       demo: "https://trainr-ru6t.onrender.com/",
@@ -64,6 +67,7 @@ const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
+    image: "src/assets/chatter.png",
     links: {
       github: "https://github.com/alexpadev/chatter",
       demo: "https://todo-mern-app.netlify.app",
@@ -82,6 +86,7 @@ const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiBootstrap key="tw" color="af5048" size={24} />,
     ],
+    image: "src/assets/jmaps.png",
     links: {
       github: "https://github.com/alexpadev/jmaps",
       demo: "https://todo-mern-app.netlify.app",
@@ -98,6 +103,7 @@ const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />,
     ],
+    image: "src/assets/wannapop.png",
     links: {
       github: "https://github.com/alexpadev/wannapop",
       demo: "https://todo-mern-app.netlify.app",
@@ -146,7 +152,7 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
-                  <img src="src/assets/trainR.png" alt="Project image" className="w-full h-70 object-cover rounded-lg mb-4" />
+                  <img src={project.image} alt="Project image" className="border border-neutral-800 w-full h-70 object-cover rounded-lg mb-4" />
                 </div>
                 <div className="mt-4 flex items-center space-x-4">
                   {project.links.github && (
