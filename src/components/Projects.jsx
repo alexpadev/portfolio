@@ -11,7 +11,7 @@ export const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
-    image: "src/assets/portfolio.png",
+    image: `${import.meta.env.BASE_URL}portfolio.png`,
     links: {
       github: "https://github.com/alexpadev/portfolio",
       demo:  "https://mi-portfolio.netlify.app"
@@ -29,7 +29,7 @@ export const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
-    image: "src/assets/trainR.png",
+    image: `${import.meta.env.BASE_URL}trainR.png`,
     links: {
       github: "https://github.com/alexpadev/trainR",
       demo:  "https://trainr-ru6t.onrender.com/"
@@ -49,7 +49,7 @@ export const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
-    image: "src/assets/tactix.png",
+    image: `${import.meta.env.BASE_URL}tactix.png`,
     links: {
       github: "https://github.com/alexpadev/tactix"
     },
@@ -67,7 +67,7 @@ export const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
-    image: "src/assets/chatter.png",
+    image: `${import.meta.env.BASE_URL}chatter.png`,
     links: {
       github: "https://github.com/alexpadev/chatter"
     },
@@ -85,7 +85,7 @@ export const projectsData = [
       <SiReact key="react" color="af5048" size={24} />,
       <SiBootstrap key="bootstrap" color="af5048" size={24} />
     ],
-    image: "src/assets/jmaps.png",
+    image: `${import.meta.env.BASE_URL}jmaps.png`,
     links: {
       github: "https://github.com/alexpadev/jmaps"
     },
@@ -99,7 +99,7 @@ export const projectsData = [
       <SiBootstrap key="bootstrap" color="af5048" size={24} />
 
     ],
-    image: "src/assets/wannapop.png",
+    image: `${import.meta.env.BASE_URL}wannapop.png`,
     links: {
       github: "https://github.com/alexpadev/wannapop"
     },
