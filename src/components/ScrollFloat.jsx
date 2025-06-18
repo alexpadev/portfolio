@@ -1,4 +1,5 @@
-import { useRef, useEffect } from "react";
+// src/components/ScrollFloat.jsx
+import { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,33 +15,38 @@ const ScrollFloat = ({
 }) => {
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (!containerRef.current) return;
+  useLayoutEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
 
-    const elems = Array.from(containerRef.current.children);
+    // creamos un contexto ligado al div contenedor
+    const ctx = gsap.context(() => {
+      // recogemos los hijos del contenedor
+      const elems = Array.from(el.children);
+      if (elems.length === 0) return; // nada que animar
 
+      gsap.fromTo(
+        elems,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: animationDuration,
+          ease,
+          stagger,
+          scrollTrigger: {
+            trigger: el,
+            start: scrollStart,
+            end: scrollEnd,
+            toggleActions: "play none none reverse",
+            pin: false,
+          },
+        }
+      );
+    }, el);
 
-    gsap.fromTo(
-      elems,
-      { y: 40, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: animationDuration,
-        ease: ease,
-        stagger: stagger,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: scrollStart,
-          end: scrollEnd,
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
+    // al desmontar, revertimos SOLO lo creado en este contexto
+    return () => ctx.revert();
   }, [animationDuration, ease, scrollStart, scrollEnd, stagger]);
 
   return (

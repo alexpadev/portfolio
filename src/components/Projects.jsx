@@ -2,16 +2,19 @@ import ScrollFloat from "./ScrollFloat";
 import { SiReact, SiTailwindcss, SiJavascript, SiMongodb, SiGithub, SiNodedotjs, SiExpress, SiPostgresql, SiPhp, SiLaravel, SiBootstrap, SiFilament, SiComposer, SiPostman, SiMariadb, SiEjs } from "react-icons/si";
 import { MdInsertLink } from 'react-icons/md'
 
-const projectsData = [
+export const projectsData = [
   {
     title: "Portfolio",
     description:
       "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. It has experimentation with GSAP animations aswell. Includes personal information, tech stack, projects and contact information.",
-    techIcons: [<SiReact key="react" color="af5048" size={24} />, <SiTailwindcss key="tw" color="af5048" size={24} />],
+    techIcons: [
+      <SiReact key="react" color="af5048" size={24} />,
+      <SiTailwindcss key="tw" color="af5048" size={24} />
+    ],
     image: "src/assets/portfolio.png",
     links: {
       github: "https://github.com/alexpadev/portfolio",
-      demo: "https://mi-portfolio.netlify.app",
+      demo:  "https://mi-portfolio.netlify.app"
     },
   },
   {
@@ -19,94 +22,86 @@ const projectsData = [
     description:
       "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
     techIcons: [
-      <SiJavascript key="node" color="af5048" size={24} />,
+      <SiJavascript key="js" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
-      <SiExpress key="node" color="af5048" size={24} />,
-      <SiEjs key="node" color="af5048" size={24} />,
+      <SiExpress key="express" color="af5048" size={24} />,
+      <SiEjs key="ejs" color="af5048" size={24} />,
       <SiMongodb key="mongo" color="af5048" size={24} />,
-      <SiMariadb className="mr-1" key="mongo" color="af5048" size={24} />,
+      <SiMariadb key="mariadb" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />,
+      <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
     image: "src/assets/tactix.png",
     links: {
-      github: "https://github.com/alexpadev/tactix",
-      demo: "https://todo-mern-app.netlify.app",
+      github: "https://github.com/alexpadev/tactix"
     },
   },
-
-    {
+  {
     title: "TrainR",
     description:
-      "App where users can manage their own routines. Backend made with NodeJs with Express, frontend made with React. Database based on PostgreSQL. ",
+      "App where users can manage their own routines. Backend made with NodeJs with Express, frontend made with React. Database based on PostgreSQL.",
     techIcons: [
-      <SiJavascript key="node" color="af5048" size={24} />,
+      <SiJavascript key="js" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
-      <SiExpress key="node" color="af5048" size={24} />,
-      <SiPostgresql key="mongo" color="af5048" size={24} />,
+      <SiExpress key="express" color="af5048" size={24} />,
+      <SiPostgresql key="postgres" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />,
+      <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
     image: "src/assets/trainR.png",
     links: {
       github: "https://github.com/alexpadev/trainR",
-      demo: "https://trainr-ru6t.onrender.com/",
+      demo:  "https://trainr-ru6t.onrender.com/"
     },
   },
-
   {
     title: "Chatter",
     description:
-      "Real-time chatting app. Backend based on NodeJS with Express and Frontend on React. Database with MongoDB and styles with TailwindCSS. User authentication with email verification, individual and group chat via websocket. AI chatbot with Gemini API.",
+      "Real-time chatting app. Backend based on NodeJS with Express y Frontend en React. BD en MongoDB, autenticación y chat grupal por websocket. AI chatbot con Gemini API.",
     techIcons: [
-      
-      <SiJavascript key="node" color="af5048" size={24} />,
+      <SiJavascript key="js" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
-      <SiExpress key="node" color="af5048" size={24} />,
+      <SiExpress key="express" color="af5048" size={24} />,
       <SiMongodb key="mongo" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />,
+      <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
     image: "src/assets/chatter.png",
     links: {
-      github: "https://github.com/alexpadev/chatter",
-      demo: "https://todo-mern-app.netlify.app",
+      github: "https://github.com/alexpadev/chatter"
     },
   },
-   {
+  {
     title: "jMaps",
     description:
-      "App where users can create places, which have questions and reviews created by the community. This places can be seen in a world map made with React-leaflet package. Made with Laravel for the backend and React for the frontend.",
+      "App where users create places with questions and reviews; these are displayed on a map using React-Leaflet. Backend in Laravel, frontend in React.",
     techIcons: [
-      <SiPhp key="node" color="af5048" size={24} />,
-      <SiLaravel className="ml-1" key="node" color="af5048" size={24} />,
-      <SiFilament className="ml-1" key="node" color="af5048" size={38} />,
-      <SiComposer className="ml-1" key="node" color="af5048" size={24} />,
-      <SiPostman className="ml-1" key="node" color="af5048" size={24} />,
+      <SiPhp key="php" color="af5048" size={24} />,
+      <SiLaravel key="laravel" color="af5048" size={24} />,
+      <SiFilament key="filament" color="af5048" size={38} />,
+      <SiComposer key="composer" color="af5048" size={24} />,
+      <SiPostman key="postman" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
-      <SiBootstrap key="tw" color="af5048" size={24} />,
+      <SiBootstrap key="bootstrap" color="af5048" size={24} />
     ],
     image: "src/assets/jmaps.png",
     links: {
-      github: "https://github.com/alexpadev/jmaps",
-      demo: "https://todo-mern-app.netlify.app",
+      github: "https://github.com/alexpadev/jmaps"
     },
   },
-
   {
     title: "Wannapop",
     description:
       "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
     techIcons: [
-      <SiJavascript key="node" color="af5048" size={24} />,
+      <SiJavascript key="js" color="af5048" size={24} />,
       <SiMongodb key="mongo" color="af5048" size={24} />,
       <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />,
+      <SiTailwindcss key="tw" color="af5048" size={24} />
     ],
     image: "src/assets/wannapop.png",
     links: {
-      github: "https://github.com/alexpadev/wannapop",
-      demo: "https://todo-mern-app.netlify.app",
+      github: "https://github.com/alexpadev/wannapop"
     },
   },
 ];
@@ -120,14 +115,7 @@ const Projects = () => {
       <h2 className="text-4xl font-bold text-center mb-18">My Projects</h2>
 
       <div className="max-w-7xl mx-auto">
-        <ScrollFloat
-          animationDuration={0.6}
-          ease="power3.out"
-          scrollStart="center bottom"
-          scrollEnd="bottom top"
-          stagger={0.02}
-        >
-        </ScrollFloat>
+      
 
         <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-8">
           {projectsData.map((project) => (
@@ -169,7 +157,7 @@ const Projects = () => {
                         className="flex items-center space-x-1 hover:text-neutral-300 transition"
                       >
                         <SiGithub size={24} />
-                        <span className="font-medium">Code</span>
+                        <span className="font-medium ml-1">Code</span>
                       </a>
                     )}
                     {project.links.demo && (
