@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 
 const Header = () => {
   return (
-    <header className="w-full flex justify-end space-x-6 z-20 py-7 px-17">
+    <header className="w-full flex justify-center md:justify-end space-x-6 z-20 py-7 px-17">
       <a
         href="https://drive.google.com/file/d/1d6v3dV0Ipj2qTWAtCnM51Lj-6rF0zhxA/view?usp=sharing"
         target="_blank"
@@ -32,12 +32,12 @@ const Header = () => {
           size={40}
         />
       </a>
-      <a href="mailto:alexpa200316@gmail.com">
+      {/* <a href="mailto:alexpa200316@gmail.com">
         <MdEmail
           className="text-neutral-100 hover:text-neutral-200 transition"
           size={45}
         />
-      </a>
+      </a> */}
     </header>
   );
 };

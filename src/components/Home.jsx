@@ -17,7 +17,7 @@ function Home() {
             w-full md:w-6/7
             flex flex-col items-center md:items-end justify-center
             px-4 sm:px-6 md:pr-8
-            mt-40 md:mt-[-200px]
+            mt-30 md:mt-[-200px]
             
           "
         >
@@ -25,7 +25,7 @@ function Home() {
             text="Alejandro"
             className="
               text-[60px] sm:text-[100px] md:text-[150px]
-              leading-none font-bold text-neutral-200
+              leading-snug font-bold text-neutral-200
               text-center md:text-right block
             "
             delay={75}

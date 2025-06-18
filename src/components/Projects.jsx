@@ -18,6 +18,24 @@ export const projectsData = [
     },
   },
   {
+    title: "TrainR",
+    description:
+      "App where users can manage their own routines. Backend made with Node.js with Express, frontend made with React. Database based on PostgreSQL.",
+    techIcons: [
+      <SiJavascript key="js" color="af5048" size={24} />,
+      <SiNodedotjs key="node" color="af5048" size={24} />,
+      <SiExpress key="express" color="af5048" size={24} />,
+      <SiPostgresql key="postgres" color="af5048" size={24} />,
+      <SiReact key="react" color="af5048" size={24} />,
+      <SiTailwindcss key="tw" color="af5048" size={24} />
+    ],
+    image: "src/assets/trainR.png",
+    links: {
+      github: "https://github.com/alexpadev/trainR",
+      demo:  "https://trainr-ru6t.onrender.com/"
+    },
+  },
+  {
     title: "Tactix",
     description:
       "Probably my most ambitious project so far. Tactix is an application where users can create or take part in sport events (such as football games or tournaments) alone or as a team. Among other features, there is team creation, game and tournament organization, group and individual chat made with websocket, a map where users can see nearby events, etc. Backend based on Node.js + Express, two databases with MongoDB and MariaDB. Frontend made with React.",
@@ -36,24 +54,7 @@ export const projectsData = [
       github: "https://github.com/alexpadev/tactix"
     },
   },
-  {
-    title: "TrainR",
-    description:
-      "App where users can manage their own routines. Backend made with Node.js with Express, frontend made with React. Database based on PostgreSQL.",
-    techIcons: [
-      <SiJavascript key="js" color="af5048" size={24} />,
-      <SiNodedotjs key="node" color="af5048" size={24} />,
-      <SiExpress key="express" color="af5048" size={24} />,
-      <SiPostgresql key="postgres" color="af5048" size={24} />,
-      <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />
-    ],
-    image: "src/assets/trainR.png",
-    links: {
-      github: "https://github.com/alexpadev/trainR",
-      demo:  "https://trainr-ru6t.onrender.com/"
-    },
-  },
+  
   {
     title: "Chatter",
     description:
