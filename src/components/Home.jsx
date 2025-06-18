@@ -11,11 +11,22 @@ function Home() {
 
   return (
     <div className="flex flex-col bg-neutral-900">
-      <div className="flex-shrink-0 w-full h-screen flex">
-        <div className="w-6/7 flex flex-col items-end justify-center pr-8">
+      <div className="flex flex-col md:flex-row flex-shrink-0 w-full h-screen">
+        <div
+          className="
+            w-full md:w-6/7
+            flex flex-col items-center md:items-end justify-center
+            px-4 sm:px-6 md:pr-8
+            mt-60 md:mt-0
+          "
+        >
           <SplitText
             text="Alejandro"
-            className="text-[150px] leading-none font-bold text-neutral-200 text-right block"
+            className="
+              text-[60px] sm:text-[100px] md:text-[150px]
+              leading-none font-bold text-neutral-200
+              text-center md:text-right block
+            "
             delay={75}
             duration={0.6}
             ease="power3.out"
@@ -30,7 +41,11 @@ function Home() {
 
           <SplitText
             text="Pelaez"
-            className="text-[115px] leading-none font-bold text-neutral-200 text-right block"
+            className="
+              text-[50px] sm:text-[90px] md:text-[115px]
+              leading-none font-bold text-neutral-200
+              text-center md:text-right block
+            "
             delay={125}
             duration={0.6}
             ease="power3.out"
@@ -45,7 +60,11 @@ function Home() {
 
           <SplitText
             text="Full‑stack developer"
-            className="text-[30px] leading-none font-bold text-[#af5048] text-right block mt-6"
+            className="
+              text-[16px] sm:text-[24px] md:text-[30px]
+              leading-none font-bold text-[#af5048]
+              text-center md:text-right block mt-4 sm:mt-6
+            "
             delay={20}
             duration={0.6}
             ease="power3.out"
@@ -59,8 +78,20 @@ function Home() {
           />
         </div>
 
-        <div className="w-1/2 flex items-center justify-start ml-10">
-          <l-trio size="150" speed="4.0" color="#af5048" />
+        <div
+          className="
+            w-full md:w-1/2
+            flex items-center justify-center md:justify-start
+             md:mt-0
+            px-4 sm:px-6 md:ml-10
+          "
+        >
+          <l-trio
+            size="150"
+            speed="4.0"
+            color="#af5048"
+            class="transform scale-30 md:scale-100 origin-center"
+          />
         </div>
       </div>
 

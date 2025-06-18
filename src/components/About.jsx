@@ -64,20 +64,35 @@ const sections = [
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen mt-25 bg-neutral-900 text-neutral-100 justify-center py-16">
+    <div
+      className="
+        w-full min-h-screen mt-25 bg-neutral-900 text-neutral-100
+        justify-center py-16
+        px-4 sm:px-6 md:px-0
+      "
+    >
       <h2 className="text-4xl font-bold text-center mb-8">About me</h2>
 
-      <div className="text-white w-3/4 max-w-5xl mb-12 px-4 pt-12 mx-auto">
+      <div
+        className="
+          text-white
+          w-full sm:w-3/4
+          max-w-5xl
+          mb-12
+          px-0 sm:px-4
+          pt-12
+          mx-auto
+        "
+      >
         {sections.map(({ Icon, title, content }) => (
           <ScrollFloat
             key={title}
             animationDuration={0.6}
             ease="power3.out"
-            scrollStart="center bottom"   
-            scrollEnd="bottom top"      
+            scrollStart="center bottom"
+            scrollEnd="bottom top"
             stagger={0.02}
           >
-
             <section className="mb-12">
               <header className="flex items-center mb-4 border-b-2 border-neutral-600 pb-2 space-x-2">
                 <Icon size={28} className="text-[#af5048]" />

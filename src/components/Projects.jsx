@@ -6,7 +6,7 @@ export const projectsData = [
   {
     title: "Portfolio",
     description:
-      "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. It has experimentation with GSAP animations aswell. Includes personal information, tech stack, projects and contact information.",
+      "My online portfolio, made with React, TailwindCSS and deployed in GitHub Pages. In this project I experimented with GSAP animations for the frist time. Includes personal information, tech stack, projects and contact information.",
     techIcons: [
       <SiReact key="react" color="af5048" size={24} />,
       <SiTailwindcss key="tw" color="af5048" size={24} />
@@ -20,7 +20,7 @@ export const projectsData = [
   {
     title: "Tactix",
     description:
-      "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
+      "Probably my most ambitious project so far. Tactix is an application where users can create or take part in sport events (such as football games or tournaments) alone or as a team. Among other features, there is team creation, game and tournament organization, group and individual chat made with websocket, a map where users can see nearby events, etc. Backend based on Node.js + Express, two databases with MongoDB and MariaDB. Frontend made with React.",
     techIcons: [
       <SiJavascript key="js" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
@@ -39,7 +39,7 @@ export const projectsData = [
   {
     title: "TrainR",
     description:
-      "App where users can manage their own routines. Backend made with NodeJs with Express, frontend made with React. Database based on PostgreSQL.",
+      "App where users can manage their own routines. Backend made with Node.js with Express, frontend made with React. Database based on PostgreSQL.",
     techIcons: [
       <SiJavascript key="js" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
@@ -57,7 +57,7 @@ export const projectsData = [
   {
     title: "Chatter",
     description:
-      "Real-time chatting app. Backend based on NodeJS with Express y Frontend en React. BD en MongoDB, autenticación y chat grupal por websocket. AI chatbot con Gemini API.",
+      "Real-time chatting app. Backend based on Node.js with Express y Frontend en React. BD en MongoDB, autenticación y chat grupal por websocket. AI chatbot con Gemini API.",
     techIcons: [
       <SiJavascript key="js" color="af5048" size={24} />,
       <SiNodedotjs key="node" color="af5048" size={24} />,
@@ -92,12 +92,11 @@ export const projectsData = [
   {
     title: "Wannapop",
     description:
-      "Aplicación de gestión de tareas (To-Do) con autenticación de usuarios. Backend en Node.js + Express y base de datos MongoDB. Frontend en React.",
+      "Wallapop clone. Users can look for products published by sellers. Unable to work due to the API belonging to my old educational institution. Coded with vanilla Javascript and simple HTML templates.",
     techIcons: [
       <SiJavascript key="js" color="af5048" size={24} />,
-      <SiMongodb key="mongo" color="af5048" size={24} />,
-      <SiReact key="react" color="af5048" size={24} />,
-      <SiTailwindcss key="tw" color="af5048" size={24} />
+      <SiBootstrap key="bootstrap" color="af5048" size={24} />
+
     ],
     image: "src/assets/wannapop.png",
     links: {
@@ -110,14 +109,24 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full bg-neutral-900 mt-25 text-neutral-100 py-16 px-50"
+      className="
+        w-full bg-neutral-900 mt-25 text-neutral-100 py-16
+        px-4 sm:px-6 md:px-50
+      "
     >
       <h2 className="text-4xl font-bold text-center mb-18">My Projects</h2>
 
       <div className="max-w-7xl mx-auto">
-      
-
-        <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-8">
+        <div
+          className="
+            grid grid-cols-1
+            sm:grid-cols-1
+            md:grid-cols-2
+            xl:grid-cols-2
+            3xl:grid-cols-3
+            gap-8
+          "
+        >
           {projectsData.map((project) => (
             <ScrollFloat
               key={project.title}
@@ -128,26 +137,32 @@ const Projects = () => {
               stagger={0.03}
             >
               <div className="border border-neutral-700 rounded-lg p-6 flex flex-col h-full hover:shadow-lg transition-shadow">
-                
                 <div className="mb-4">
-                  <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-                  <p className="text-neutral-300 mb-4">{project.description}</p>
-                
+                  <h3 className="text-2xl font-semibold mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    {project.description}
+                  </p>
                 </div>
 
                 <div className="mt-auto">
-                    <div className="flex flex-wrap items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2 mb-4">
                     {project.techIcons.map((IconComp, i) => (
-                      <div key={i} className="text-amber-400 mb-4">{IconComp}</div>
+                      <div key={i} className="text-amber-400">
+                        {IconComp}
+                      </div>
                     ))}
                   </div>
-                 <div className="border border-neutral-800 rounded-lg overflow-hidden mb-8 w-full">
+
+                  <div className="border border-neutral-800 rounded-lg overflow-hidden mb-8 w-full">
                     <img
                       src={project.image}
                       alt={`Imagen del proyecto ${project.title}`}
                       className="w-full h-auto object-contain"
                     />
                   </div>
+
                   <div className="flex items-center space-x-4">
                     {project.links.github && (
                       <a
@@ -173,10 +188,8 @@ const Projects = () => {
                     )}
                   </div>
                 </div>
-
               </div>
             </ScrollFloat>
-
           ))}
         </div>
       </div>

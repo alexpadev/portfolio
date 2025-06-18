@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
 import { SiLinkedin, SiGithub } from "react-icons/si";
-import { AiFillFile } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-import {cvIcon} from './svg';
 
 
 
