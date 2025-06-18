@@ -17,7 +17,8 @@ function Home() {
             w-full md:w-6/7
             flex flex-col items-center md:items-end justify-center
             px-4 sm:px-6 md:pr-8
-            mt-60 md:mt-0
+            mt-40 md:mt-[-200px]
+            
           "
         >
           <SplitText
@@ -90,7 +91,7 @@ function Home() {
             size="150"
             speed="4.0"
             color="#af5048"
-            class="transform scale-30 md:scale-100 origin-center"
+            class="transform scale-30 md:scale-100 origin-center md:mt-[-200px] mt-[-30px]"
           />
         </div>
       </div>
