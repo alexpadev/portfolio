@@ -5,9 +5,7 @@ import Stack from "./Stack";
 import Projects from "./Projects";
 
 function Home() {
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
+ 
 
   return (
     <div className="flex flex-col bg-neutral-900">
@@ -17,7 +15,7 @@ function Home() {
             w-full md:w-6/7
             flex flex-col items-center md:items-end justify-center
             px-4 sm:px-6 md:pr-8
-            mt-30 md:mt-[-200px]
+            mt-38 md:mt-[-200px]
             
           "
         >
@@ -37,7 +35,6 @@ function Home() {
             threshold={0.1}
             rootMargin="-100px"
             textAlign="right"
-            onLetterAnimationComplete={handleAnimationComplete}
           />
 
           <SplitText
@@ -56,7 +53,6 @@ function Home() {
             threshold={0.1}
             rootMargin="-100px"
             textAlign="right"
-            onLetterAnimationComplete={handleAnimationComplete}
           />
 
           <SplitText
@@ -75,7 +71,6 @@ function Home() {
             threshold={0.1}
             rootMargin="-100px"
             textAlign="right"
-            onLetterAnimationComplete={handleAnimationComplete}
           />
         </div>
 

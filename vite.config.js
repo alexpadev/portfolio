@@ -7,6 +7,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/portfolio/',
   plugins: [react(), tailwindcss()],
+  optimizeDeps: {
+    include: ['ldrs/trio']
+  },
   server: {
     hmr:true,
   }

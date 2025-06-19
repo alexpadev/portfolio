@@ -14,7 +14,7 @@ export const projectsData = [
     image: `${import.meta.env.BASE_URL}portfolio.png`,
     links: {
       github: "https://github.com/alexpadev/portfolio",
-      demo:  "https://mi-portfolio.netlify.app"
+      demo:  "https://alexpadev.github.io/portfolio/"
     },
   },
   {
