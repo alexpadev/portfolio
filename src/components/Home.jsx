@@ -82,12 +82,13 @@ function Home() {
             px-4 sm:px-6 md:ml-10
           "
         >
-          <l-trio
-            size="150"
-            speed="4.0"
-            color="#af5048"
-            class="transform scale-30 md:scale-100 origin-center md:mt-[-200px] mt-[-30px]"
-          />
+          <div className="transform scale-50 md:scale-100 origin-center md:mt-[-200px] mt-[-30px]">
+            <l-trio
+              size="150"
+              speed="4.0"
+              color="#af5048"
+            />
+          </div>
         </div>
       </div>
 
