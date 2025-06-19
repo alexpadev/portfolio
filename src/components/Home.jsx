@@ -1,5 +1,7 @@
 import SplitText from "./SplitText";
-import "ldrs/trio";
+// import "ldrs/trio";
+import { Trio } from 'ldrs/react'
+import 'ldrs/react/Trio.css'
 import About from "./About";
 import Stack from "./Stack";
 import Projects from "./Projects";
@@ -83,11 +85,7 @@ function Home() {
           "
         >
           <div className="transform scale-50 md:scale-100 origin-center md:mt-[-200px] mt-[-30px]">
-            <l-trio
-              size="150"
-              speed="4.0"
-              color="#af5048"
-            />
+            <Trio size={150} speed={4.0} color="#af5048" />
           </div>
         </div>
       </div>
